@@ -9,6 +9,12 @@ public struct Palette: Identifiable, Hashable {
     public var colors: [ColorType] = []
     public var names: [String] = []
     
+    public init(name: String, colors: [ColorType], names: [String]) {
+        self.name = name;
+        self.colors = colors;
+        self.names = names;
+    }
+    
     public func get(_ index: Int) -> (color: ColorType, name: String) {
         return (colors[index], names[index])
     }
